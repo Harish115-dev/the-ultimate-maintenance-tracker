@@ -7,7 +7,9 @@
         "start": "node backend/server.js",
         "install-deps": "cd backend && npm install",
         "postinstall": "npm run install-deps",
-        "dev": "cd backend && npm run dev"
+        "dev": "cd backend && npm run dev",
+        "seed": "cd backend && npm run seed",
+        "seed": "cd backend && npm run seed"
     },
     "keywords": [],
     "author": "",

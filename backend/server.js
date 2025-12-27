@@ -1,4 +1,5 @@
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -9,7 +10,9 @@ const { apiLimiter } = require('./middleware/rateLimiter');
 // Import models to ensure associations are loaded
 require('./models');
 
-const path = require('path');
+
+// const path = require('path'); // Already imported at top
+
 
 const app = express();
 
