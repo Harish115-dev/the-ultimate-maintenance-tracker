@@ -3,7 +3,8 @@ const path = require('path');
 
 const sequelize = new Sequelize({
     dialect: 'sqlite',
-    storage: process.env.DB_PATH || path.join(__dirname, '../database.sqlite'),
+    // Force usage of backend/database.sqlite to avoid root vs backend CWD confusion
+    storage: path.join(__dirname, '../database.sqlite'),
     logging: process.env.NODE_ENV === 'development' ? console.log : false,
     define: {
         timestamps: true,
