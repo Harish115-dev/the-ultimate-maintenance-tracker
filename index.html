@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearGuard - Complete Equipment Maintenance Solutions</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo" onclick="scrollToTop()">
+                <div class="logo-icon">⚙️</div>
+                <span>GearGuard</span>
+            </div>
+            <nav class="nav">
+                <a class="nav-link" onclick="scrollToSection('services')">Features</a>
+                <a class="nav-link" onclick="scrollToSection('benefits')">Why GearGuard</a>
+                <a class="nav-link" onclick="scrollToSection('locate')">Support</a>
+                <a class="nav-link" href="dashboard.html"
+                    style="background: var(--primary, #FF6B00); color: white; padding: 0.5rem 1rem; border-radius: 6px;">🔧
+                    Staff Dashboard</a>
+            </nav>
+            <div class="user-icon" onclick="window.location.href='login.html'">👤</div>
+        </div>
+    </header>
+
+    <!-- Location Banner -->
+    <div class="location-banner" onclick="openModal('locationModal')">
+        <div class="location-info">
+            <span class="location-icon">📍</span>
+            <div>
+                <div style="font-weight: 700;">Kim Industrial Area</div>
+                <div style="font-size: 0.9rem; color: #666;">Surat, Gujarat, 394110</div>
+            </div>
+        </div>
+        <span class="dropdown-icon">▼</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">Industrial Maintenance<br>Simplified.</h1>
+        <p class="hero-subtitle">The complete solution for managing equipment, maintenance teams, and work orders in one
+            place.</p>
+        <div class="quick-actions">
+            <button class="btn btn-primary" onclick="window.location.href='login.html'">
+                <span>🚀</span> Get Started
+            </button>
+            <button class="btn btn-secondary" onclick="scrollToSection('services')">
+                <span>⚡</span> View Features
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="section" id="services">
+        <div class="section-header">
+            <h2 class="section-title">Platform Features</h2>
+            <a class="view-all" href="login.html">View all features →</a>
+        </div>
+        <div class="service-grid">
+            <div class="service-card" onclick="window.location.href='login.html'">
+                <div class="service-icon">📋</div>
+                <div class="service-name">Kanban Board</div>
+            </div>
+            <div class="service-card" onclick="window.location.href='login.html'">
+                <div class="service-icon">🏭</div>
+                <div class="service-name">Equipment DB</div>
+            </div>
+            <div class="service-card" onclick="window.location.href='login.html'">
+                <div class="service-icon">👥</div>
+                <div class="service-name">Team Mgmt</div>
+            </div>
+            <div class="service-card" onclick="window.location.href='login.html'">
+                <div class="service-icon">⚡</div>
+                <div class="service-name">Work Orders</div>
+            </div>
+            <div class="service-card" onclick="openServiceModal('Tools')">
+                <div class="service-icon">🔧</div>
+                <div class="service-name">Tools</div>
+            </div>
+            <div class="service-card" onclick="openServiceModal('HVAC Systems')">
+                <div class="service-icon">❄️</div>
+                <div class="service-name">HVAC Systems</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section" id="benefits">
+        <div class="section-header">
+            <h2 class="section-title">Why Choose GearGuard?</h2>
+        </div>
+        <div class="offers-grid">
+            <div class="offer-card" onclick="window.location.href='login.html'">
+                <div class="offer-content">
+                    <div>
+                        <h3 class="offer-title">Streamline Your Maintenance Workflow</h3>
+                        <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 1.5rem;">
+                            <span style="font-size: 1rem;">Increase efficiency by up to</span>
+                            <span class="offer-price">40%</span>
+                        </div>
+                    </div>
+                    <div class="offer-features">
+                        <div class="offer-feature">Kanban-style Request Management</div>
+                        <div class="offer-feature">Real-time Technician Assignment</div>
+                    </div>
+                </div>
+                <div class="offer-image" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
+                    📊
+                </div>
+            </div>
+
+            <div class="offer-card" onclick="window.location.href='login.html'">
+                <div class="offer-content">
+                    <div>
+                        <h3 class="offer-title">Maximize Equipment Uptime</h3>
+                        <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 1.5rem;">
+                            <span style="font-size: 1rem;">Reduce downtime by</span>
+                            <span class="offer-price">30%</span>
+                        </div>
+                    </div>
+                    <div class="offer-features">
+                        <div class="offer-feature">Preventive Maintenance Schedules</div>
+                        <div class="offer-feature">Detailed Asset History Tracking</div>
+                    </div>
+                </div>
+                <div class="offer-image" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
+                    ⚙️
+                </div>
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot active"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Locate Us CTA -->
+    <section class="section" id="locate">
+        <div class="cta-banner" onclick="openModal('locationModal')">
+            <div class="cta-illustration">🏪</div>
+            <div class="cta-content">
+                <h2 class="cta-title">In need of GearGuard care?</h2>
+                <p class="cta-subtitle">Find a GearGuard centre closest to you for quick access to our services.</p>
+                <button class="cta-button" onclick="event.stopPropagation(); openModal('locationModal')">Locate</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Testimonials</h2>
+        </div>
+        <div style="position: relative;">
+            <button class="slider-arrow slider-arrow-left" onclick="moveTestimonialSlide(-1)">‹</button>
+            <button class="slider-arrow slider-arrow-right" onclick="moveTestimonialSlide(1)">›</button>
+            <div class="testimonials-slider">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card" style="padding: 2rem; text-align: center;">
+                            <p style="font-size: 1.2rem; font-style: italic;">"GearGuard transformed our facility
+                                management. Downtime is down 30%."</p>
+                            <h4 style="margin-top: 1rem; color: var(--primary);">John D.</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Plant Manager, AutoCorp</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card" style="padding: 2rem; text-align: center;">
+                            <p style="font-size: 1.2rem; font-style: italic;">"The Kanban board makes tracking requests
+                                incredibly easy for our technicians."</p>
+                            <h4 style="margin-top: 1rem; color: var(--primary);">Sarah L.</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Operations Head, TechMfg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-dots" id="testimonialDots">
+            <div class="dot active" onclick="goToTestimonialSlide(0)"></div>
+            <div class="dot" onclick="goToTestimonialSlide(1)"></div>
+            <div class="dot" onclick="goToTestimonialSlide(2)"></div>
+            <div class="dot" onclick="goToTestimonialSlide(3)"></div>
+            <div class="dot" onclick="goToTestimonialSlide(4)"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links" style="display: flex; gap: 2rem; justify-content: center; padding: 2rem;">
+            <a class="footer-link" onclick="window.location.href='login.html'">About GearGuard</a>
+            <a class="footer-link" onclick="window.location.href='login.html'">Careers</a>
+            <a class="footer-link" onclick="window.location.href='login.html'">Privacy Policy</a>
+        </div>
+        <div class="copyright" style="text-align: center; padding-bottom: 2rem; color: #666;">
+            <p>© 2025 GearGuard Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Generic Info Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="infoModalTitle">Information</h2>
+                <button class="modal-close" onclick="closeModal('infoModal')">×</button>
+            </div>
+            <div id="infoModalContent" style="line-height: 1.8;">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">✓</div>
+        <div class="toast-message" id="toastMessage"></div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script>
+        // Simple Interaction Script for Landing Page
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openModal(name) {
+            if (name === 'loginModal') {
+                window.location.href = 'login.html';
+            } else {
+                alert('Please Login to access this feature.');
+                window.location.href = 'login.html';
+            }
+        }
+
+        function closeModal(name) {
+            document.getElementById(name).classList.remove('active');
+        }
+
+        function openServiceModal(serviceName) {
+            alert('Detailed service info for ' + serviceName + ' is available in the dashboard. Please Login.');
+            window.location.href = 'login.html';
+        }
+
+        function bookService(serviceName, price) {
+            if (confirm('To book ' + serviceName + ', you need to login first. Proceed to login?')) {
+                window.location.href = 'login.html';
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            if (toast) {
+                document.getElementById('toastMessage').textContent = msg;
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 3000);
+            } else {
+                alert(msg);
+            }
+        }
+
+        function moveTestimonialSlide(direction) {
+            const track = document.getElementById('testimonialsTrack');
+            if (track) track.scrollLeft += direction * 300;
+        }
+
+        function playVideo() {
+            alert('Video playback requires login.');
+        }
+
+        function goToTestimonialSlide(index) {
+            const track = document.getElementById('testimonialsTrack');
+            if (track) track.scrollTo({ left: index * 300, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>

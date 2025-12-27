@@ -1,0 +1,10 @@
+# Backend files
+node_modules/
+*.log
+.env
+database.sqlite
+uploads/
+
+# OS
+.DS_Store
+Thumbs.db
